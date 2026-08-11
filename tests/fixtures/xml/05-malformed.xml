@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <parcels>
+    <Parcel><Weight>1</Weight><Value>10</Value></Parcel>
+    <Parcel><Weight>2</Weight><Value>20</Value>
+  </parcels>
+</Container>

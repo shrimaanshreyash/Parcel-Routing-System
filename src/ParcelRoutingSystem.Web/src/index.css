@@ -1,0 +1,43 @@
+html {
+  color-scheme: light;
+  background: #eef4ef;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Manrope Variable', Manrope, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid #44524b;
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 0;
+}
+
+::selection {
+  color: #ffffff;
+  background: #08754d;
+}

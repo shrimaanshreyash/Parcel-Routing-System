@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <parcels>
+    <Parcel><Weight>0.02</Weight><Value>0</Value></Parcel>
+    <Parcel><Weight>2</Weight><Value>0</Value></Parcel>
+    <Parcel><Weight>100</Weight><Value>2000</Value></Parcel>
+    <Parcel><Weight>11</Weight><Value>500</Value></Parcel>
+    <Parcel><Weight>3</Weight><Value>0</Value></Parcel>
+    <Parcel><Weight>10</Weight><Value>1500</Value></Parcel>
+    <Parcel><Weight>10</Weight><Value>1500</Value></Parcel>
+    <Parcel><Weight>0.7</Weight><Value>0</Value></Parcel>
+    <Parcel><Weight>0.9</Weight><Value>1100</Value></Parcel>
+    <Parcel><Weight>4.5</Weight><Value>0</Value></Parcel>
+    <Parcel><Weight>120</Weight><Value>1500</Value></Parcel>
+    <Parcel><Weight>130</Weight><Value>2000</Value></Parcel>
+    <Parcel><Weight>0.3</Weight><Value>0</Value></Parcel>
+    <Parcel><Weight>1</Weight><Value>0</Value></Parcel>
+    <Parcel><Weight>15</Weight><Value>100</Value></Parcel>
+    <Parcel><Weight>15</Weight><Value>100</Value></Parcel>
+    <Parcel><Weight>0.4</Weight><Value>0</Value></Parcel>
+  </parcels>
+</Container>

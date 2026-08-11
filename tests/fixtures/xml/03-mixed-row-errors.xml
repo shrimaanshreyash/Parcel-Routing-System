@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <parcels>
+    <Parcel><Weight>0.5</Weight><Value>50</Value><Country>NL</Country></Parcel>
+    <Parcel><Value>10</Value><Country>GB</Country></Parcel>
+    <Parcel><Weight>two</Weight><Value>20</Value><Country>DE</Country></Parcel>
+    <Parcel><Weight>3</Weight><Value>30</Value><Country>FR</Country><Unexpected>ignored-text</Unexpected></Parcel>
+    <Parcel><Weight>4</Weight><Value>-1</Value><Country>BE</Country></Parcel>
+    <Parcel><Weight>5</Weight><Value>500</Value><Country>IE</Country></Parcel>
+  </parcels>
+</Container>

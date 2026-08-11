@@ -1,0 +1,65 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: parcel_routing
+      POSTGRES_USER: parcel_router
+      POSTGRES_PASSWORD: ${PARCEL_ROUTING_POSTGRES_PASSWORD:?Set PARCEL_ROUTING_POSTGRES_PASSWORD}
+    ports:
+      - "127.0.0.1:${PARCEL_ROUTING_POSTGRES_PORT:-5432}:5432"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready --username parcel_router --dbname parcel_routing
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+    volumes:
+      - parcel-routing-postgres-data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ..
+      dockerfile: src/ParcelRoutingSystem.Api/Dockerfile
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      PARCEL_ROUTING_DATABASE_CONNECTION: Host=postgres;Port=5432;Database=parcel_routing;Username=parcel_router;Password=${PARCEL_ROUTING_POSTGRES_PASSWORD:?Set PARCEL_ROUTING_POSTGRES_PASSWORD}
+      Database__ApplyMigrationsOnStartup: "true"
+      ParcelAuthentication__Mode: Development
+      ParcelAuthentication__DevelopmentAutoAuthenticate: "true"
+      ParcelAuthentication__DevelopmentActor: local-reviewer
+      ParcelAuthentication__DevelopmentRoles__0: Operator
+      ParcelAuthentication__DevelopmentRoles__1: InsuranceApprover
+      ParcelAuthentication__DevelopmentRoles__2: RuleAdministrator
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - --fail
+        - --silent
+        - http://localhost:8080/health/ready
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 15s
+
+  web:
+    build:
+      context: ..
+      dockerfile: src/ParcelRoutingSystem.Web/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${PARCEL_ROUTING_WEB_PORT:-8190}:8080"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  parcel-routing-postgres-data:

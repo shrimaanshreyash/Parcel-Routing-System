@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <parcels>
+    <Parcel><Weight>0.25</Weight><Value>0</Value></Parcel>
+    <Parcel><Value>25.50</Value><DestinationCountry>SE</DestinationCountry><Weight>2.5</Weight></Parcel>
+    <Parcel><Receipient><Name>Discarded at import boundary</Name></Receipient><Weight>12</Weight><Value>50</Value><Country>IE</Country></Parcel>
+  </parcels>
+</Container>

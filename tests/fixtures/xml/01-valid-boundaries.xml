@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <parcels>
+    <Parcel><Weight>0.999</Weight><Value>999.99</Value><Country>NL</Country></Parcel>
+    <Parcel><Weight>1</Weight><Value>1000</Value><Country>GB</Country></Parcel>
+    <Parcel><Weight>1.001</Weight><Value>1000.01</Value><Country>DE</Country></Parcel>
+    <Parcel><Weight>10</Weight><Value>100</Value><Country>FR</Country></Parcel>
+    <Parcel><Weight>10.001</Weight><Value>1500</Value><Country>BE</Country></Parcel>
+  </parcels>
+</Container>

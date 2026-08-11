@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Container [
+  <!ENTITY external SYSTEM "file:///privacy-safe-nonexistent-resource">
+]>
+<Container>
+  <parcels>
+    <Parcel><Weight>1</Weight><Value>&external;</Value><Country>GB</Country></Parcel>
+  </parcels>
+</Container>

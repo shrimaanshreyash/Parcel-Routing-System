@@ -1,0 +1,17 @@
+services:
+  postgres:
+    ports: !reset []
+
+  api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      Database__ApplyMigrationsOnStartup: "false"
+      ParcelAuthentication__Mode: OidcJwt
+      ParcelAuthentication__Authority: ${PARCEL_ROUTING_OIDC_AUTHORITY:?Set PARCEL_ROUTING_OIDC_AUTHORITY}
+      ParcelAuthentication__Audience: ${PARCEL_ROUTING_OIDC_AUDIENCE:?Set PARCEL_ROUTING_OIDC_AUDIENCE}
+      ParcelAuthentication__DevelopmentAutoAuthenticate: "false"
+      ParcelAuthentication__DevelopmentActor: ""
+      ParcelAuthentication__DevelopmentRoles__0: ""
+      ParcelAuthentication__DevelopmentRoles__1: ""
+      ParcelAuthentication__DevelopmentRoles__2: ""
+      ReverseProxy__KnownNetworks__0: ${PARCEL_ROUTING_TRUSTED_PROXY_NETWORK:?Set PARCEL_ROUTING_TRUSTED_PROXY_NETWORK}

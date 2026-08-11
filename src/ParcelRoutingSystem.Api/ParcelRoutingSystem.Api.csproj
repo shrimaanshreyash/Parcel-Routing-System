@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="10.0.10" />
+    <!-- Explicitly pins the patched transitive version required by ADR 0005. -->
+    <PackageReference Include="Microsoft.OpenApi" Version="2.7.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParcelRoutingSystem.Application\ParcelRoutingSystem.Application.csproj" />
+    <ProjectReference Include="..\ParcelRoutingSystem.Infrastructure\ParcelRoutingSystem.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ParcelRoutingSystem.Api/ParcelRoutingSystem.Api.csproj" />
+    <Project Path="src/ParcelRoutingSystem.Application/ParcelRoutingSystem.Application.csproj" />
+    <Project Path="src/ParcelRoutingSystem.Domain/ParcelRoutingSystem.Domain.csproj" />
+    <Project Path="src/ParcelRoutingSystem.Infrastructure/ParcelRoutingSystem.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ParcelRoutingSystem.Api.IntegrationTests/ParcelRoutingSystem.Api.IntegrationTests.csproj" />
+    <Project Path="tests/ParcelRoutingSystem.Application.Tests/ParcelRoutingSystem.Application.Tests.csproj" />
+    <Project Path="tests/ParcelRoutingSystem.Domain.Tests/ParcelRoutingSystem.Domain.Tests.csproj" />
+    <Project Path="tests/ParcelRoutingSystem.Infrastructure.IntegrationTests/ParcelRoutingSystem.Infrastructure.IntegrationTests.csproj" />
+  </Folder>
+</Solution>

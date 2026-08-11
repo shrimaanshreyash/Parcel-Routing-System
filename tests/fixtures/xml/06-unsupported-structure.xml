@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <parcels>
+    <Parcel><Weight>1</Weight><Value>10</Value><Country>GB</Country></Parcel>
+  </parcels>
+</Manifest>
